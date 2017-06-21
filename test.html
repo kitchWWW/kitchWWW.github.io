@@ -9,9 +9,6 @@ div.container {
 }
 
 header, footer {
-    padding: 0em;
-    color: white;
-    clear: left;
 }
 
 nav {
@@ -21,6 +18,11 @@ nav {
     min-width:20px;
     margin: 0;
     padding: 0em;
+}
+
+aside {
+    float: right;
+    min-width:20px;
 }
 
 nav ul {
@@ -43,14 +45,12 @@ article {
 <div class="container">
   
 <nav>
-  <div style="position: relative; width:60px; height: 800px;">    
-      <div style="position: absolute; bottom: -5px;">
-      <font size="1">
-        here are some <br>cool <a href="http://www.whoiselmertzilch.com">links</a> bro
-        </font>
-      </div>
-  </div>
+  &nbsp;
 </nav>
+
+<aside>
+  &nbsp;
+</aside>
 
 <article>
   <div style="max-width:300px">
@@ -73,14 +73,19 @@ article {
    </div>
     </div>
 
-
-
-
-
-
 </article>
 
-<footer>Copyright &copy; W3Schools.com</footer>
+
+<footer>
+<div style="position: relative; width:57px; height: 400px;">    
+      <div style="position: absolute; bottom: -5px;">
+      <font size="1">
+        here are some <br>cool <a href="http://www.whoiselmertzilch.com">links</a> bro
+        </font>
+      </div>
+  </div>
+</footer>
+
 
 </div>
 
