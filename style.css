@@ -3,7 +3,13 @@
     src: url('https://fonts.googleapis.com/css?family=EB+Garamond');
 }
 
+hr {
+    width:50%;
+}
 
+p {
+  text-indent: 50px;
+}
 /* unvisited link */
 a:link {
     color: black;
