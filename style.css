@@ -10,8 +10,8 @@ h2 {
 }
 
 p {
-  text-indent: 50px;
-    margin-bottom: -15px;
+    text-indent: 50px;
+    margin-bottom: -10px;
 }
 /* unvisited link */
 a:link {
